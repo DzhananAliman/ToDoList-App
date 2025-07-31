@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pretty To-Do App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-pink-50 flex justify-center p-6 min-h-screen">
+    <!-- Главен контейнер -->
+    <div id="mainContainer" class="container bg-white p-6 rounded-2xl shadow-xl w-96">
+      <h1 class="text-3xl font-bold text-pink-500 text-center mb-6">🌸 My To-Do App</h1>
+
+      <div class="flex gap-2 mb-4">
+        <input
+          type="text"
+          id="listNameInput"
+          placeholder="New list name..."
+          class="flex-1 border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+        />
+        <button
+          id="addListBtn"
+          class="bg-pink-400 hover:bg-pink-500 text-white px-4 py-2 rounded-lg"
+        >
+          Add
+        </button>
+      </div>
+
+      <ul id="taskList" class="space-y-2"></ul>
+    </div>
+
+    <!-- Редактор -->
+    <div
+      id="editorContainer"
+      class="hidden container bg-white p-6 rounded-2xl shadow-xl w-96"
+    >
+      <button id="backBtn" class="text-blue-500 mb-2 hover:underline">⬅ Back</button>
+      <h2 id="editorTitle" class="text-2xl font-bold text-pink-500 mb-3"></h2>
+      <textarea
+        id="editorText"
+        class="w-full h-32 border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 mb-3"
+      ></textarea>
+      <div class="flex gap-2">
+        <button
+          id="saveBtn"
+          class="flex-1 bg-green-400 hover:bg-green-500 text-white py-2 rounded-lg"
+        >
+          Save
+        </button>
+        <button
+          id="deleteBtn"
+          class="flex-1 bg-red-400 hover:bg-red-500 text-white py-2 rounded-lg"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
